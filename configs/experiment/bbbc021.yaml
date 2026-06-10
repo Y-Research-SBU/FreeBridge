@@ -1,0 +1,67 @@
+# @package _global_
+
+name: bbbc021
+dim: 64                       # frozen VAE latent dimension
+
+# --- data: exported control/perturbed latents (update to your local paths) ---
+data:
+  src_train: data/bbbc021/src_train.npy
+  tgt_train: data/bbbc021/tgt_train.npy
+  src_val:   data/bbbc021/src_val.npy
+  tgt_val:   data/bbbc021/tgt_val.npy
+
+# --- problem ---
+prob:
+  name: bbbc021
+  sigma: 0.5
+
+# --- network: MLP vector field for latent vectors ---
+net: mlp
+field: vector
+
+# --- bridge matching (Alg 1) ---
+matching:
+  loss: bm
+
+# --- conditional SOC (Alg 3 & 4) ---
+csoc:
+  name: ${name}
+  B: 2048
+  epd_fct: 50
+  T_mean: 10
+  T_gamma: 10
+  optim: adam
+  S: 50
+  N: 2
+  lr_mean: 0.01
+  lr_gamma: 0.01
+  nitr: 200
+  mB: 256
+  momentum: 0.0
+  scale_by_sigma: true
+  IW: false
+
+# --- FreeBridge empirical support cost: V_t(z) = lambda * d_emp(z)^2 ---
+state_cost:
+  type: empirical_support
+  support_weight: 0.5         # lambda; ablation: 0.0 / 0.3 / 0.5
+  detach_bank: true
+  chunk_size: 65536
+
+# --- optimization ---
+optim:
+  max_epochs: 200
+  num_workers: 2
+  batch_size: 256
+  val_batch_size: 256
+  grad_clip: 1.0
+  lr: 3e-4
+  wd: 0.0
+  eps: 1e-8
+  ema_decay: 0.999
+
+eval_coupling: false
+nfe: 100
+use_wandb: false
+resume: null
+seed: 0

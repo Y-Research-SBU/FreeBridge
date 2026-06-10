@@ -1,0 +1,35 @@
+# python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.ipynb_checkpoints/
+.venv*/
+
+# data (do not commit)
+*.npy
+*.npz
+*.pt
+*.pth
+*.ckpt
+*.safetensors
+*.bin
+*.h5
+*.hdf5
+*.tar
+*.tar.gz
+masks_week*/
+tmp/
+hf/
+wandb/
+data/bbbc021/
+crops/
+
+# run outputs / products
+freebridge_latent_runs/
+vae_runs/
+exports*/
+outputs/
+*.log
+
+# os
+.DS_Store

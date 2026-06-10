@@ -1,0 +1,44 @@
+name: freebridge
+channels:
+  - pytorch
+  - conda-forge
+  - nvidia
+dependencies:
+  - python=3.9
+  - pytorch=2.0.1
+  - torchvision=0.15.2
+  - pytorch-cuda=11.7
+  - matplotlib
+  - jupyter
+  - numpy=1.24.*
+  - scipy
+  - pip
+  - tqdm
+  - torchmetrics=0.11.*
+  - pip:
+    - rich
+    - tifffile
+    - pillow
+    - lpips
+    - huggingface_hub
+    - submitit
+    - pre-commit
+    - black==22.6.0
+    - ipykernel
+    - torchdiffeq
+    - scikit-learn
+    - pytorch-lightning==1.8.5.post0
+    - hydra-core==1.2.0
+    - hydra-submitit-launcher==1.2.0
+    - hydra_colorlog==1.2.0
+    - click
+    - wandb
+    - biopython
+    - pyevtk
+    - ipympl
+    - geomloss
+    - colored-traceback
+    - POT
+    - termcolor
+    - laspy
+    - gdown
