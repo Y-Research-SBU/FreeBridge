@@ -25,14 +25,13 @@
   </p>
 
 <p align="center">
-  <!-- TODO: replace the Paper "#" with the arXiv / MICCAI proceedings link once available -->
-  <a href="#">
-    <img src="https://img.shields.io/badge/Paper-MICCAI%202026-blue?style=flat-square&logo=arxiv" alt="Paper">
+  <a href="https://arxiv.org/abs/2606.11286">
+    <img src="https://img.shields.io/badge/arXiv-2606.11286-B31B1B?style=flat-square&logo=arxiv" alt="arXiv">
   </a>
   <a href="https://github.com/Y-Research-SBU/FreeBridge">
     <img src="https://img.shields.io/badge/Code-GitHub-black?style=flat-square&logo=github" alt="Code">
   </a>
-  <a href="https://huggingface.co/datasets/CurioWang/BBBC021">
+  <a href="https://huggingface.co/datasets/Y-Research-Group/BBBC021">
     <img src="https://img.shields.io/badge/Hugging%20Face-Dataset-yellow?style=flat-square&logo=huggingface" alt="Hugging Face Dataset">
   </a>
   <a href="https://www.python.org/downloads/">
@@ -63,18 +62,6 @@
 <p align="center"><sub><em>Figure 1. (a) The Cell Engine: single-cell states define the manifold, and a Schrödinger Bridge drift transports control to perturbed cells under an empirical support cost. (b) On BBBC021, FreeBridge achieves lower overall and condition-level FID and KID than PhenDiff, IMPA, and CellFlux.</em></sub></p>
 
 
-## 🧬 Method
-
-FreeBridge is structured as a **Cell Engine** that separates *state specification* (the space of valid single-cell states) from *stochastic transport* (the dynamics between them).
-
-**State unit.** Multi-cell microscopy images are instance-segmented (Cellpose) into single-cell crops of 96×96 pixels. Each crop is embedded by a frozen encoder (see `data_prep/`) into a latent vector, turning the control and perturbed cell populations into two distributions in latent space, together with a bank of real-cell latents that marks the empirically supported region of that space.
-
-**Transition rule.** A time-conditioned drift network defines a Schrödinger Bridge: a stochastic process that transports the control latent distribution to the perturbed one.
-
-**Geometric regularization.** Endpoint matching alone leaves the path between control and perturbed states underdetermined, so a support cost penalizes intermediate states that stray from the empirical manifold, measured by how far each state sits from the nearest real-cell latent. This keeps trajectories within the space of observed cell morphologies rather than passing through unsupported regions of latent space. In practice the distance is computed per-minibatch over the control and perturbed embeddings using batched `torch.cdist`; the nearest-neighbour selection is non-differentiable, while gradients flow through the resulting distance.
-
-The full objective and its derivation are in the paper.
-
 ## 📊 Main Results
 
 Endpoint-fidelity results from the FreeBridge paper (MICCAI 2026) on BBBC021, under the unified single-cell protocol (5k generated samples per condition, averaged over three seeds). Shown here for reference.
@@ -97,7 +84,7 @@ R<sub>viol</sub> is the Support Violation Rate: the fraction of intermediate sta
 
 ## 📈 Hyperparameter Sensitivity
 
-We vary the support weight λ<sub>bank</sub>, the base noise level σ, and the number of inference steps (NFE). Endpoint fidelity stays stable across settings. The support weight is the most informative axis: setting it to 0 disables the support cost and degrades both FID and MoA, while a moderate value of 0.5 is best in the sweep below, with 1.0 marginally worse.
+We vary the support weight λ<sub>bank</sub>, base noise level σ, and number of inference steps (NFE); endpoint fidelity stays stable across all settings. The support weight matters most: disabling it (0) lowers both FID and MoA, while 0.5 is best in the sweep below.
 
 <p align="center">
   <img src="./assets/Fig6.png" width="96%" alt="Hyperparameter sensitivity over support weight, base noise level, and inference steps">
@@ -183,15 +170,15 @@ python train.py experiment=bbbc021 state_cost.support_weight=1.0
 If you find FreeBridge useful in your research, please cite:
 
 ```bibtex
-@inproceedings{wang2026freebridge,
-  title     = {FreeBridge: Variational Schr{\"o}dinger Bridges for Cellular Transition Dynamics},
-  author    = {Wang, Xurui and Ren, Qin and Ma, Jun and Ling, Haibin and You, Chenyu},
-  booktitle = {Medical Image Computing and Computer-Assisted Intervention (MICCAI)},
-  year      = {2026}
+@article{wang2026freebridge,
+  title   = {FreeBridge: Variational Schr{\"o}dinger Bridges for Cellular Transition Dynamics},
+  author  = {Wang, Xurui and Ren, Qin and Ma, Jun and Ling, Haibin and You, Chenyu},
+  journal = {arXiv preprint arXiv:2606.11286},
+  year    = {2026}
 }
 ```
 
-<!-- TODO: once the official MICCAI proceedings entry is out, update with the LNCS volume, pages, publisher (Springer), and DOI. -->
+> Accepted at MICCAI 2026. The citation will be updated to the official proceedings entry once published.
 
 ## 🙏 Acknowledgements
 
