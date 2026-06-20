@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>FreeBridge: Variational Schrödinger Bridges for Cellular Transition Dynamics</title>
+<meta name="description" content="FreeBridge: a Schrödinger Bridge for single-cell transition modeling under endpoint-only supervision. MICCAI 2026." />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="og:title" content="FreeBridge: Variational Schrödinger Bridges for Cellular Transition Dynamics" />
+<meta property="og:description" content="A Schrödinger Bridge for single-cell transition modeling under endpoint-only supervision." />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Hubot+Sans:ital,wght@0,200..900;1,200..900&family=Mona+Sans:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+
+<script>
+  window.MathJax = {
+    tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+    options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+  };
+</script>
+<script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+<style>
+  :root {
+    --ink: #0f172a;       
+    --ink-soft: #334155;  
+    --muted: #64748b;     
+    --line: #e2e8f0;    
+    --paper: #f8fafc;   
+    --card: #ffffff;      
+    --accent: #0284c7;    
+    --accent-deep: #0369a1;
+    --btn: #0f172a;
+    --btn-hover: #1e293b;
+    --maxw: 900px;      
+  }
+
+  *{box-sizing:border-box;}
+  html{ -webkit-text-size-adjust:100%; scroll-behavior:smooth; }
+  body{
+    margin:0; background:var(--paper); color:var(--ink);
+    font-family:"Mona Sans", system-ui, -apple-system, sans-serif;
+    font-size:16px; line-height:1.75;
+    -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility;
+  }
+  .wrap{ max-width:var(--maxw); margin:0 auto; padding:0 24px; }
+  a{ color:var(--accent); text-decoration:none; transition: color 0.15s ease; }
+  a:hover{ color:var(--accent-deep); text-decoration:underline; }
+
+  /* Navigation Bar */
+  .topbar{ position:sticky; top:0; z-index:20; background:rgba(248,250,252,0.85);
+    -webkit-backdrop-filter:blur(12px); backdrop-filter:blur(12px); border-bottom:1px solid var(--line); }
+  .nav-inner{ display:flex; align-items:center; justify-content:space-between; height:56px; }
+  .brand{ font-family:"Hubot Sans", sans-serif; font-weight:800; letter-spacing:-0.02em; color:var(--ink); font-size:19px; }
+  .brand:hover{ text-decoration:none; }
+  .nav-links{ display:flex; align-items:center; gap:24px; }
+  .nav-links a{ color:var(--muted); font-size:14px; font-weight:500; }
+  .nav-links a:hover{ color:var(--ink
