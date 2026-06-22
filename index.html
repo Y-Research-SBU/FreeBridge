@@ -27,15 +27,15 @@
 
 <style>
   :root {
-    /* Phylo-inspired palette */
-    --ink: #16150F;
-    --ink-soft: #4B473D;
-    --muted: #7A766B;
-    --line: rgba(22, 21, 15, 0.12);
-    --paper: #F4F1E8;
-    --card: #F8F5EC;
-    --accent: #CDE94B;
-    --accent-soft: rgba(205, 233, 75, 0.22);
+    /* Original blue academic palette */
+    --ink: #111827;
+    --ink-soft: #374151;
+    --muted: #6B7280;
+    --line: rgba(37, 99, 235, 0.16);
+    --paper: #FFFFFF;
+    --card: #F8FAFC;
+    --accent: #2563EB;
+    --accent-soft: rgba(37, 99, 235, 0.10);
     --maxw: 960px;
   }
   
@@ -60,10 +60,10 @@
     position: sticky; 
     top: 0; 
     z-index: 20; 
-    background: rgba(244, 241, 232, 0.88);
+    background: rgba(255, 255, 255, 0.88);
     -webkit-backdrop-filter: blur(12px); 
     backdrop-filter: blur(12px); 
-    border-bottom: 1px solid rgba(22, 21, 15, 0.08); 
+    border-bottom: 1px solid rgba(37, 99, 235, 0.12); 
   }
   .nav-inner { display: flex; align-items: center; justify-content: space-between; height: 64px; }
   .brand { font-family: "Google Sans", sans-serif; font-weight: 700; color: var(--ink); font-size: 20px; letter-spacing: -0.02em; }
@@ -97,7 +97,7 @@
     margin: 16px 0 28px; 
   }
   .authors { font-size: 17px; line-height: 2; margin: 0 auto 12px; max-width: 52rem; color: var(--ink-soft); }
-  .authors a { color: var(--accent); font-weight: 500; text-decoration: none; }
+  .authors a { color: var(--accent); font-weight: 600; text-decoration: none; }
   .authors a:hover { text-decoration: underline; }
   .authors sup { font-size: 0.72em; color: var(--ink-soft); margin-left: 1px; }
   .affil { color: var(--ink-soft); font-size: 14.5px; margin: 14px auto 0; max-width: 52rem; line-height: 1.8; }
@@ -117,7 +117,7 @@
     font-family: "Google Sans", sans-serif; 
     transition: all .2s cubic-bezier(0.4, 0, 0.2, 1); 
   }
-  .btn:hover { background: var(--accent); color: var(--ink); border-color: var(--accent); text-decoration: none; opacity: 1; }
+  .btn:hover { background: var(--accent); color: #FFFFFF; border-color: var(--accent); text-decoration: none; opacity: 1; transform: translateY(-1px); }
   .btn svg { width: 15px; height: 15px; fill: currentColor; }
 
   .hero-anim { margin: 36px 0 24px; }
@@ -193,7 +193,7 @@
     font-weight: 700; 
     font-size: 12px; 
     color: var(--ink); 
-    background: rgba(205, 233, 75, 0.28); 
+    background: rgba(37, 99, 235, 0.10); 
     border-radius: 4px; 
     padding: 2px 8px; 
     white-space: nowrap; 
@@ -221,7 +221,7 @@
 
   .table-wrap { overflow-x: auto; margin: 16px 0 24px; width: 100%; }
   table { width: 100%; border-collapse: collapse; font-size: 14px; min-width: 500px; margin-bottom: 4px; }
-  th, td { padding: 12px 14px; text-align: center; border-bottom: 1px solid rgba(22, 21, 15, 0.08); }
+  th, td { padding: 12px 14px; text-align: center; border-bottom: 1px solid rgba(37, 99, 235, 0.12); }
   
   thead tr:first-child th { border-top: 2px solid var(--ink); }
   tbody tr:last-child td { border-bottom: 2px solid var(--ink); }
@@ -238,20 +238,20 @@
 
   .eq-box { background: var(--card); border: 1px solid var(--line); border-radius: 6px; padding: 20px; margin: 24px 0; overflow-x: auto; }
   .codeblock { margin: 20px 0; }
-  .codeblock .label { font-family: "Google Sans", sans-serif; font-size: 12px; font-weight: 700; color: var(--ink); background: var(--accent); border-radius: 4px 4px 0 0; padding: 4px 12px; display: inline-block; }
+  .codeblock .label { font-family: "Google Sans", sans-serif; font-size: 12px; font-weight: 700; color: #FFFFFF; background: var(--accent); border-radius: 4px 4px 0 0; padding: 4px 12px; display: inline-block; }
   .codeblock pre { margin-top: 0; border-top-left-radius: 0; }
-  pre { background: var(--ink); border: 1px solid rgba(22,21,15,.18); border-radius: 6px; padding: 16px 20px; overflow-x: auto; margin: 0; }
+  pre { background: #0F172A; border: 1px solid rgba(37,99,235,.22); border-radius: 6px; padding: 16px 20px; overflow-x: auto; margin: 0; }
   pre code { color: var(--paper); font-size: 13.5px; }
   pre code .c { color: #9ca3af; }
   code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 13.5px; }
   pre.cite { background: var(--card); border: 1px solid var(--line); } 
   pre.cite code { color: var(--ink-soft); }
 
-  .cite-head { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 10px; border-bottom: 1px solid rgba(22, 21, 15, 0.08); padding-bottom: 8px; }
+  .cite-head { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 10px; border-bottom: 1px solid rgba(37, 99, 235, 0.12); padding-bottom: 8px; }
   .cite-head h2 { margin: 0; border-bottom: 0; padding-bottom: 0; }
   .cite-head h2::after { display: none; }
   .copy { font-family: "Google Sans", sans-serif; font-weight: 500; font-size: 12.5px; cursor: pointer; background: var(--ink); border: 1px solid var(--ink); color: var(--paper); padding: 5px 14px; border-radius: 999px; transition: all .15s ease; }
-  .copy:hover { border-color: var(--accent); color: var(--ink); background: var(--accent); }
+  .copy:hover { border-color: var(--accent); color: #FFFFFF; background: var(--accent); }
 
   footer { margin: 80px 0 48px; padding-top: 24px; border-top: 1px solid var(--line); color: var(--ink-soft); font-size: 13.5px; text-align: center; }
   footer a { color: var(--ink-soft); text-decoration: underline; }
@@ -571,7 +571,7 @@ python train.py experiment=bbbc021 state_cost.support_weight=1.0</code></pre>
   const ctx=canvas.getContext('2d');
   const reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   const TAU=Math.PI*2;
-  const ctrl=[120,115,105], acc=[205,233,75], haloL=[210,205,190], haloR=[205,233,75];
+  const ctrl=[100,116,139], acc=[37,99,235], haloL=[191,219,254], haloR=[37,99,235];
   let W=0,H=0,dpr=1,P=[],raf=null; const N=95;
   const g=()=>(Math.random()+Math.random()+Math.random()-1.5)/1.5;
   function spawn(p){ p.x0=W*0.16+g()*W*0.045; p.y0=H*0.5+g()*H*0.22; p.x1=W*0.50+g()*W*0.060; p.y1=H*0.5+g()*H*0.30;
@@ -580,12 +580,12 @@ python train.py experiment=bbbc021 state_cost.support_weight=1.0</code></pre>
   function bez(p,t){ const u=1-t; return [u*u*p.x0+2*u*t*p.x1+t*t*p.x2, u*u*p.y0+2*u*t*p.y1+t*t*p.y2]; }
   function lc(a,b,t){ return [a[0]+(b[0]-a[0])*t,a[1]+(b[1]-a[1])*t,a[2]+(b[2]-a[2])*t]; }
   function manifold(){ ctx.save(); ctx.translate(W*0.5,H*0.5); ctx.scale(1,0.38);
-    const gr=ctx.createRadialGradient(0,0,0,0,0,W*0.5); gr.addColorStop(0,'rgba(205,233,75,0.16)'); gr.addColorStop(0.8,'rgba(22,21,15,0.05)'); gr.addColorStop(1,'rgba(244,241,232,0)');
+    const gr=ctx.createRadialGradient(0,0,0,0,0,W*0.5); gr.addColorStop(0,'rgba(37,99,235,0.12)'); gr.addColorStop(0.8,'rgba(15,23,42,0.04)'); gr.addColorStop(1,'rgba(255,255,255,0)');
     ctx.fillStyle=gr; ctx.beginPath(); ctx.arc(0,0,W*0.5,0,TAU); ctx.fill(); ctx.restore(); }
   function halo(cx,cy,c,r,a){ const gr=ctx.createRadialGradient(cx,cy,0,cx,cy,r);
     gr.addColorStop(0,`rgba(${c[0]},${c[1]},${c[2]},${a})`); gr.addColorStop(1,`rgba(${c[0]},${c[1]},${c[2]},0)`);
     ctx.fillStyle=gr; ctx.beginPath(); ctx.arc(cx,cy,r,0,TAU); ctx.fill(); }
-  function labels(){ ctx.fillStyle='#16150F'; ctx.font='700 13px "Google Sans",sans-serif'; ctx.textAlign='center';
+  function labels(){ ctx.fillStyle='#111827'; ctx.font='700 13px "Google Sans",sans-serif'; ctx.textAlign='center';
     ctx.fillText('control', W*0.16, H*0.88); ctx.fillText('perturbed', W*0.84, H*0.88); }
   function resize(){ const r=canvas.getBoundingClientRect(); dpr=Math.min(window.devicePixelRatio||1,2);
     W=r.width; H=r.height; canvas.width=W*dpr; canvas.height=H*dpr; ctx.setTransform(dpr,0,0,dpr,0,0); build(); }
