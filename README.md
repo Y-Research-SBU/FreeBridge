@@ -1,50 +1,47 @@
 <div align="center">
 
-  <img src="./assets/logo.png" height="100" style="object-fit: contain;">
+  <img src="./assets/logo.png" height="96" style="object-fit: contain;">
 
-  <h2>FreeBridge: Variational Schrödinger Bridges <br> for Cellular Transition Dynamics</h2>
+  <h2>FreeBridge: Variational Schrödinger Bridges for Cellular Transition Dynamics</h2>
 
-  <h4>🌟 MICCAI 2026 🌟</h4>
+  <p><b>MICCAI 2026</b></p>
 
   <br>
 
   <p>
-    <a href="https://github.com/curioWang">Xurui Wang</a><sup>1,2 ★</sup>&nbsp;
-    <a href="https://soonera.github.io/qinren">Qin Ren</a><sup>1 ★</sup>&nbsp;
-    <a href="https://ca.linkedin.com/in/jun-ma-867b34224">Jun Ma</a><sup>3</sup>&nbsp;
-    <a href="https://scholar.google.com/citations?user=v3w4IYUAAAAJ">Haibin Ling</a><sup>1</sup>&nbsp;
+    <a href="https://github.com/curioWang">Xurui Wang</a><sup>1,2 ★</sup>&nbsp;&nbsp;
+    <a href="https://soonera.github.io/qinren">Qin Ren</a><sup>1 ★</sup>&nbsp;&nbsp;
+    <a href="https://ca.linkedin.com/in/jun-ma-867b34224">Jun Ma</a><sup>3</sup>&nbsp;&nbsp;
+    <a href="https://scholar.google.com/citations?user=v3w4IYUAAAAJ">Haibin Ling</a><sup>1</sup>&nbsp;&nbsp;
     <a href="https://chenyuyou.me/">Chenyu You</a><sup>1 ✉</sup>
   </p>
 
   <p>
     <sup>1</sup> Stony Brook University &nbsp;&nbsp;
     <sup>2</sup> University of Toronto &nbsp;&nbsp;
-    <sup>3</sup> University Health Network &nbsp;&nbsp; <br>
+    <sup>3</sup> University Health Network <br>
     <sup>★</sup> Equal Contribution &nbsp;&nbsp;
-    <sup>✉</sup> Corresponding Author <br>
+    <sup>✉</sup> Corresponding Author
   </p>
 
-<p align="center">
-  <a href="https://arxiv.org/abs/2606.11286">
-    <img src="https://img.shields.io/badge/arXiv-2606.11286-B31B1B?style=flat-square&logo=arxiv" alt="arXiv">
-  </a>
-  <a href="https://github.com/Y-Research-SBU/FreeBridge">
-    <img src="https://img.shields.io/badge/Code-GitHub-black?style=flat-square&logo=github" alt="Code">
-  </a>
-  <a href="https://huggingface.co/datasets/Y-Research-Group/BBBC021">
-    <img src="https://img.shields.io/badge/Hugging%20Face-Dataset-yellow?style=flat-square&logo=huggingface" alt="Hugging Face Dataset">
-  </a>
-  <a href="https://www.python.org/downloads/">
-    <img src="https://img.shields.io/badge/Python-3.9-3776AB?style=flat-square&logo=python&logoColor=white" alt="Python 3.9">
-  </a>
-  <a href="https://pytorch.org/get-started/previous-versions/">
-    <img src="https://img.shields.io/badge/PyTorch-2.0.1-red?style=flat-square&logo=pytorch" alt="PyTorch 2.0.1">
-  </a>
-</p>
+  <p>
+    <a href="https://arxiv.org/abs/2606.11286">
+      <img src="https://img.shields.io/badge/arXiv-2606.11286-B31B1B?style=flat-square&logo=arxiv" alt="arXiv">
+    </a>
+    <a href="https://y-research-sbu.github.io/FreeBridge/">
+      <img src="https://img.shields.io/badge/Project-Page-2563eb?style=flat-square&logo=githubpages&logoColor=white" alt="Project Page">
+    </a>
+    <a href="https://github.com/Y-Research-SBU/FreeBridge">
+      <img src="https://img.shields.io/badge/Code-GitHub-black?style=flat-square&logo=github" alt="Code">
+    </a>
+    <a href="https://huggingface.co/datasets/Y-Research-Group/BBBC021">
+      <img src="https://img.shields.io/badge/Hugging%20Face-Dataset-yellow?style=flat-square&logo=huggingface" alt="Hugging Face Dataset">
+    </a>
+  </p>
 
 </div>
 
-## 📖 Abstract
+## Abstract
 
 > We introduce **FreeBridge**, a Schrödinger Bridge formulation for modeling single-cell perturbation responses from **endpoint-only** data: control and perturbed populations, with no observed per-cell trajectories.
 >
@@ -59,12 +56,11 @@
 <p align="center">
   <img src="./assets/Fig1v3.png" width="92%" alt="FreeBridge framework overview">
 </p>
-<p align="center"><sub><em>Figure 1. (a) The Cell Engine: single-cell states define the manifold, and a Schrödinger Bridge drift transports control to perturbed cells under an empirical support cost. (b) On BBBC021, FreeBridge achieves lower overall and condition-level FID and KID than PhenDiff, IMPA, and CellFlux.</em></sub></p>
+<p align="center"><sub><em>Figure 1. (a) The Cell Engine: single-cell states define the manifold, and a Schrödinger Bridge drift transports control (source, t=0) to perturbed (target, t=1) cells under an empirical support cost. (b) On BBBC021, FreeBridge achieves lower overall and condition-level FID and KID than PhenDiff, IMPA, and CellFlux.</em></sub></p>
 
+## Main Results
 
-## 📊 Main Results
-
-Endpoint-fidelity results from the FreeBridge paper (MICCAI 2026) on BBBC021, under the unified single-cell protocol (5k generated samples per condition, averaged over three seeds). Shown here for reference.
+Endpoint-fidelity results from the FreeBridge paper (MICCAI 2026) on BBBC021, under the unified single-cell protocol (5k generated samples per condition, averaged over three seeds).
 
 | Method | FID (overall) ↓ | FID (condition) ↓ | KID (overall) ↓ | KID (condition) ↓ | R<sub>viol</sub> ↓ |
 |---|---|---|---|---|---|
@@ -73,18 +69,18 @@ Endpoint-fidelity results from the FreeBridge paper (MICCAI 2026) on BBBC021, un
 | CellFlux | 18.72 | 56.80 | 1.62 | 1.59 | 0.31 |
 | **FreeBridge** | **15.35** | **47.28** | **1.10** | **1.02** | **0.11** |
 
-R<sub>viol</sub> is the Support Violation Rate: the fraction of intermediate states whose features fall outside the empirical morphology support.
+R<sub>viol</sub> is the Support Violation Rate: the fraction of intermediate states whose features fall outside the empirical morphology support — a support-feasibility measure, not verified temporal ordering.
 
-## 🔬 Qualitative Results
+## Qualitative Results
 
 <p align="center">
   <img src="./assets/Fig4.png" width="92%" alt="Qualitative comparison of generated single cells against the target for two perturbations">
 </p>
-<p align="center"><sub><em>Figure 2. Qualitative comparison of endpoint morphology on BBBC021 for two perturbations (Demecolcine; Mevinolin/Lovastatin). Target (left, orange) versus IMPA, PhenDiff, CellFlux, and FreeBridge (right, red). FreeBridge preserves compound-specific structure such as nuclear compaction and cytoplasmic shrinkage.</em></sub></p>
+<p align="center"><sub><em>Figure 2. Qualitative comparison of endpoint morphology on BBBC021 for two perturbations (Demecolcine; Mevinolin/Lovastatin). Target (left) versus IMPA, PhenDiff, CellFlux, and FreeBridge (right). FreeBridge preserves compound-specific structure such as nuclear compaction and cytoplasmic shrinkage.</em></sub></p>
 
-## 📈 Hyperparameter Sensitivity
+## Hyperparameter Sensitivity
 
-We vary the support weight λ<sub>bank</sub>, base noise level σ, and number of inference steps (NFE); endpoint fidelity stays stable across all settings. The support weight matters most: disabling it (0) lowers both FID and MoA, while 0.5 is best in the sweep below.
+We vary the support weight λ<sub>bank</sub>, base noise level σ, and number of inference steps (NFE); endpoint fidelity stays stable across all settings. The support weight matters most: setting it to 0 removes the support cost and recovers the CellFlux baseline, while 0.5 is best in the sweep below.
 
 <p align="center">
   <img src="./assets/Fig6.png" width="96%" alt="Hyperparameter sensitivity over support weight, base noise level, and inference steps">
@@ -95,17 +91,15 @@ Support-weight sweep (BBBC021); MoA is mechanism-of-action classification accura
 
 | λ<sub>bank</sub> | FID (overall) ↓ | FID (condition) ↓ | MoA (%) ↑ | KID (overall) ↓ |
 |---|---|---|---|---|
-| 0.0 | 17.18 | 54.37 | 65.08 | 1.55 |
+| 0.0 (≡ CellFlux) | 18.72 | 56.80 | — | 1.62 |
 | **0.5** | **15.37** | **47.41** | **72.08** | **1.13** |
 | 1.0 | 15.61 | 48.02 | 71.85 | 1.17 |
 
-The support-weight 0.5 (full-model) row is from an independent run and differs marginally from the main table (15.37 vs 15.35 overall FID), as noted in the paper.
+The support-weight 0.5 (full-model) row is from an independent ablation run and differs marginally from the main table (15.37 vs 15.35 overall FID), as noted in the paper.
 
-## 🚀 Installation
+## Installation
 
-**Requirements:** Python 3.9, PyTorch 2.0.1, CUDA 11.7 (matching the GSBM environment this codebase builds on).
-
-> ⚠️ **Important:** this code uses PyTorch-Lightning **1.x** hooks (`training_epoch_end` / `validation_epoch_end`). Install `pytorch-lightning==1.8.5.post0` as pinned in `environment.yml`; **Lightning 2.x is not supported.**
+> **Important:** this code uses PyTorch-Lightning **1.x** hooks (`training_epoch_end` / `validation_epoch_end`). Install `pytorch-lightning==1.8.5.post0` as pinned in `environment.yml`; **Lightning 2.x is not supported.**
 
 ```bash
 conda env create -f environment.yml
@@ -113,7 +107,7 @@ conda activate freebridge
 pip install -e .
 ```
 
-## 📁 Data Preparation
+## Data Preparation
 
 The single-cell pipeline (`data_prep/`) turns raw BBBC021 fields into the latent endpoints used for transport:
 
@@ -146,44 +140,44 @@ python data_prep/build_bbbc021_endpoints.py \
     --out_dir data/bbbc021
 ```
 
-> 💡 **Note:** `run_week.sh` expects a `raw_list.txt` (the list of BBBC021 raw image zips) next to it in `data_prep/`. Provide your own list, or download BBBC021 from the [Broad Bioimage Benchmark Collection](https://bbbc.broadinstitute.org/BBBC021).
+> **Note:** `run_week.sh` expects a `raw_list.txt` (the list of BBBC021 raw image zips) next to it in `data_prep/`. Provide your own list, or download BBBC021 from the [Broad Bioimage Benchmark Collection](https://bbbc.broadinstitute.org/BBBC021).
 
-## ⚙️ Training
+## Training
 
-> 💡 **Note on the first epoch.** Lightning sanity validation is disabled, so epoch 0 trains on a straight-line warm start; the fitted Gaussian paths (R-step) are used from epoch 1 onward. **Use `optim.max_epochs >= 2`** (a single-epoch run only sees the warm start).
+> **Note on the first epoch.** Lightning sanity validation is disabled, so epoch 0 trains on a straight-line warm start; the fitted Gaussian paths (R-step) are used from epoch 1 onward. **Use `optim.max_epochs >= 2`** (a single-epoch run only sees the warm start).
 
 ```bash
-# FreeBridge (default, λ = 0.5)
+# FreeBridge (default, lambda_bank = 0.5)
 python train.py experiment=bbbc021
 
 # enable the latent-space FID diagnostic during training
 python train.py experiment=bbbc021 eval_coupling=true
 
-# Support-weight sweep (λ_bank)
+# support-weight sweep (lambda_bank)
 python train.py experiment=bbbc021 state_cost.support_weight=0.0
 python train.py experiment=bbbc021 state_cost.support_weight=0.5
 python train.py experiment=bbbc021 state_cost.support_weight=1.0
 ```
 
-## 📚 Citation
+## Citation
 
 If you find FreeBridge useful in your research, please cite:
 
 ```bibtex
 @article{wang2026freebridge,
-  title   = {FreeBridge: Variational Schr{\"o}dinger Bridges for Cellular Transition Dynamics},
-  author  = {Wang, Xurui and Ren, Qin and Ma, Jun and Ling, Haibin and You, Chenyu},
-  journal = {arXiv preprint arXiv:2606.11286},
-  year    = {2026}
+  title={FreeBridge: Variational Schr{\"o}dinger Bridges for Cellular Transition Dynamics},
+  author={Wang, Xurui and Ren, Qin and Ma, Jun and Ling, Haibin and You, Chenyu},
+  journal={arXiv preprint arXiv:2606.11286},
+  year={2026}
 }
 ```
 
 > Accepted at MICCAI 2026. The citation will be updated to the official proceedings entry once published.
 
-## 🙏 Acknowledgements
+## Acknowledgements
 
 This codebase is built upon [Generalized Schrödinger Bridge Matching (GSBM)](https://github.com/facebookresearch/generalized-schrodinger-bridge-matching) (Liu et al., ICLR 2024). The single-cell perturbation task and unified evaluation protocol follow [CellFlux](https://github.com/yuhui-zh15/CellFlux) (Zhang et al., 2025). We thank the authors for releasing their code.
 
-## 📄 License
+## License
 
 This project is released under the license in [`LICENSE.md`](./LICENSE.md) (CC BY-NC 4.0). Portions of this code are derived from GSBM and remain subject to the original license terms.
