@@ -4,7 +4,7 @@
 
   <h2>FreeBridge: Variational Schrödinger Bridges for Cellular Transition Dynamics</h2>
 
-  <p><b>MICCAI 2026</b></p>
+  <h3>✨ MICCAI 2026 ✨</h3>
 
   <br>
 
